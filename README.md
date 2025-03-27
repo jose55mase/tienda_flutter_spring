@@ -13,8 +13,9 @@ And this will produce a flow chart:
 
 ```mermaid
 graph LR
-A[SQL] -- Back-Spring --> B((Vista))
+A[(SQL)] -- Back-Spring --> B((Vista))
  --> F{Cliente}
 B --> D{Cliente}
+
 
 ```
