@@ -1,0 +1,14 @@
+name: say hellow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo the menssage
+        run: |
+          echo "hole mundo"
