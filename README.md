@@ -19,3 +19,15 @@ B --> D{Cliente}
 
 
 ```
+
+**UML Caso de compra**
+
+```mermaid
+flowchart TD
+id1{{Inicia}} -->Cliente --Compra--> Producto
+Producto--> id2{Si}
+id2{Si} --> siCompra
+id2{Si} --> noCompra
+noCompra  --Guarda en DB--> dB[(Database)]
+siCompra --> id4(Hace compra y genera facturas) --Guarda en DB--> dB[(Database)]
+```
