@@ -28,6 +28,10 @@ id1{{Inicia}} -->Cliente --Compra--> Producto
 Producto--> id2{Si}
 id2{Si} --> siCompra
 id2{Si} --> noCompra
-noCompra  --Guarda en DB--> dB[(Database)]
+noCompra --> id5(Crea venta con deuda en la tienda)  --Guarda en DB--> dB[(Database)]
 siCompra --> id4(Hace compra y genera facturas) --Guarda en DB--> dB[(Database)]
+id4(Hace compra y genera facturas) --> Producto --> descontar(Descuenta del stok)
+id5(Crea venta con deuda en la tienda) --> Producto --Guarda en DB--> dB[(Database)]
 ```
+
+**UML Caso de pagar prestamo o fiado**
